@@ -1,0 +1,463 @@
+
+/* ©️ 2024 | Mpumelelo Kenny Gabuza | All Rights Reserved*/
+
+:root {
+    ---other-color:  #ff0066;
+    --primary-color: #666666;
+    --secondary-color: #000;
+    --text-color: #dfdfdf;
+    --background: #000;
+    --links-color: rgba(211, 211, 211);
+    --background-gradient: linear-gradient(to bottom right, #ff0066, #b43166);
+    /* --background-leftgradient: linear-gradient(to bottom left, #ff0066, #b43166); */
+    --backgroundColor--toRight: linear-gradient(to right, #181717, #494949 );
+    --backgroundColor--toLeft: linear-gradient(to left, #181717, #494949 );
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+p {
+    font-size: 18px;
+}
+
+.container{
+    padding: 2em 10em;
+}
+
+marquee {
+    font-weight: 600;
+}
+
+
+
+/* HEADER */
+header {
+    max-height: 80px;
+    background: var(--background);
+    position: sticky;
+    top: 0px;
+}
+
+header .header__container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+header .header__container img {
+    width: 20%;
+    object-fit: contain;
+    margin-top: -12px;
+}
+
+.nav__links ul {
+    display: flex;
+    gap: 3em;
+}
+
+.nav__links ul li {
+    list-style: none;
+}
+
+.nav__links ul li a {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--links-color);
+}
+
+.nav__links a:hover,
+.nav__links a:active {
+    color: var(---other-color);
+}
+
+.nav__links ul li .cta__btn {
+    padding: .5em;
+    border-radius: .8em;
+    background: linear-gradient(to bottom right, #ff0066, #b43166);
+    cursor: pointer;
+}
+
+.nav__links ul li .cta__btn:hover {
+    color: #fff;
+    background: linear-gradient(to left, #ff0066, #b43166);
+}
+
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(---other-color);
+    display: none;
+}
+
+/* HERO */
+.hero {
+    color:#faf8f8;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 300px;
+    background: linear-gradient(to right, rgba(255, 0, 102, 1), rgba(0, 0, 0, 0.0)), url("/20240229_075018.jpg") center;
+}
+
+.hero h1{
+    padding-bottom: 1em;
+    color: #fff;
+}
+
+.hero p {
+    padding-right: 5em;
+    color: #fff9f9;
+}
+
+.hero a {
+    padding: .5em;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 1em;
+    color: var(--text-color);
+    background: var(--backgroundColor--toRight);
+    border: 1px solid var(--text-color);
+}
+
+.hero a:hover {
+    background: var(--backgroundColor--toLeft);
+    color: var(---other-color);
+}
+
+/* ABOUT ME */
+.about__me--container {
+    display: flex;
+    gap: 3em;
+    padding-top: 5em;
+    color: var(--text-color);
+    background: #121212;
+}
+
+.profile > img {
+    width: 150%;
+    object-fit: contain;
+}
+
+.about__me--container .about__me {
+    padding-left: 8em;
+    color: #fff;
+}
+
+.section__heading {
+    background: linear-gradient(0deg, #ff0066, #797979);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.about__me--container .about__me p {
+    font-size: 17px;
+}
+
+.about__me--container .about__me p a {
+    text-decoration: none;
+    color: cadetblue;
+}
+
+/* SKILLS */
+.skills {
+    color: var(--text-color);
+    background: var(--backgroundColor--toRight);
+}
+.skills > h1 {
+    font-weight: 700;
+}
+
+.skills__container {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 2em;
+}
+
+.skills .skills__container h1{
+    padding-bottom: .6em;
+    font-size: 15px;
+}
+
+.skills__container ul li {
+    list-style: none;
+}
+
+/* PROJECTS */
+.projects {
+    background: #121212;
+    color: var(--text-color);
+}
+
+.projects > .buttons {
+    padding-top: 40px;
+    padding-left: 60px;
+}
+
+.projects .buttons ul {
+    display: flex;
+    gap: 20px;
+}
+
+.projects .buttons ul li {
+    list-style: none;
+}
+
+.projects .buttons ul li a {
+    padding: 10px;
+    text-decoration: none;
+    background: linear-gradient(to bottom right, #ff0066, #b43166);
+    color: #fff;
+    font-weight: 500;
+    border-radius: 10px;
+    transition: .3s ease;
+}
+
+.projects .buttons ul li a:hover {
+    background: linear-gradient(to bottom left, #ff0066, #b43166);
+}
+
+
+.cards__container {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    gap: 5em;
+    padding-top: 3em;
+    padding-bottom: 2em;
+}
+
+.cards__container .card {
+    background: var(--backgroundColor--toLeft);
+    padding: 1em;
+    border-radius: 1em;
+    max-width: 250px;
+}
+
+.cards__container .card img {
+    width: 100%;
+    object-fit: contain;
+    padding-bottom: 10px;
+    max-height: 20em;
+}
+
+.cards__container .card h2 {
+    font-size: 16px;
+    letter-spacing: .1em;
+    padding-bottom: .4em;
+}
+
+.cards__container .card p {
+    padding-bottom: 1em;
+    font-size: 16px;
+    color: lightgrey;
+}
+
+.cards__container .card .buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: space-evenly;
+}
+
+.cards__container .card .buttons a {
+    font-size: 16px;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    letter-spacing: .1em;
+}
+
+.cards__container .card .buttons .card__btn {
+    padding: 8px 15px;
+    border-radius: 4px;
+    color: #fff;
+    background: var(--background-gradient);
+    transition: .3s ease;
+}
+
+.cards__container .card .buttons .card__btn:hover {
+    background: var(--background-leftgradient);
+}
+
+.cards__container .card .buttons .card__link {
+    padding: 8px 10px;
+    border: 1px solid var(---other-color);
+    border-radius: 4px;
+    transition: .3s ease;
+}
+
+.cards__container .card .buttons .card__link:hover {
+    color: var(---other-color);
+}
+
+/* CV SECTION */
+.recruiters {
+    color: var(--text-color);
+    text-align: center;
+    padding-bottom: 4em;
+    background: var(--backgroundColor--toRight);
+}
+
+.recruiters h1 {
+    padding-bottom: 1em;
+    padding-bottom: 2em;
+}
+
+.recruiters a {
+    padding: .8em;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 2em;
+    color: var(--text-color);
+    background: linear-gradient(to bottom right, #ff0066, #b43166);
+    border: 1px solid var(--text-color);
+}
+
+.recruiters a:hover {
+    background: linear-gradient(to left, #ff0066, #b43166);
+}
+
+/* CONTACT */
+
+.contact {
+    background: var(--background);
+    color: var(--primary-color);
+}
+
+.contact h1 {
+    text-align: center;
+    color: var(--text-color);
+}
+
+.contacts__container {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 2em;
+    font-size: 14px;
+}
+
+.contacts__container h2 {
+    padding-bottom: 1em;
+    font-style: 1em;
+    color: var(--primary-color);
+}
+
+.contacts__container h3 {
+    padding-bottom: 1em;
+}
+
+.contacts__container h3 a {
+    text-decoration: none;
+    color: var(--text-color);
+    
+}
+
+.contacts__container h3 a:hover {
+    color: aquamarine;
+}
+
+.contacts__container span {
+    padding-left: 1em;
+}
+
+.contacts__container .contact__info .links__container {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+
+.contacts__container .contact__info .links__container a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.contacts__container .contact__info .links__container a:hover {
+    color: aquamarine;
+} 
+
+footer {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-color);
+    background: var(--backgroundColor--toRight);
+}
+
+@media (max-width: 768px) {
+    .container{
+        padding: 20px;
+    }
+
+    header .header__container {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    header .header__container img {
+        width: 50%;
+        object-fit: contain;
+    }
+
+    #menu-icon {
+        display: block;
+    }
+
+    .nav__links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        /* width: 100%;
+        padding: 1rem 3%; */
+        background-color: var(--background);
+        border-top: 1px solid var(--primary-color);
+        box-shadow: 0 .5rem 1rem var(---other-color);
+        display: none;
+    }
+
+    .nav__links.active {
+        display: block;
+    }
+
+    .nav__links a {
+        display: block;
+        /* font-size: 2rem;
+        margin: 3rem 0; */
+    }
+
+    .hero p {
+        padding: 0;
+    }
+
+    .about__me--container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .profile > img {
+        width: 80%;
+        object-fit: contain;
+    }
+    
+    .about__me--container .about__me {
+        padding: 0;
+    }
+
+    .skills__container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .cards__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contacts__container {
+        display: flex;
+        flex-direction: column;
+    }
+}
